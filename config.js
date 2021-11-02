@@ -1,7 +1,9 @@
+require("dotenv").config();
+
 module.exports = {
-  mongoUri: "mongodb://localhost:8081/express-mongo",
+  mongoUri: process.env.MONGO_URI,
   redisConfig: {
-    host: "localhost",
-    port: 8082,
+    host: process.env.REDIS_HOST,
+    port: process.env.REDIS_PORT,
   },
 };
